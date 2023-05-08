@@ -43,8 +43,9 @@ const style = StyleSheet.create({
     borderRadius:50
   },
   box3: {
-    width: 60, height: 60, backgroundColor: 'steelblue',
-    borderRadius:50
+    width: 75, height: 75, backgroundColor: 'steelblue',
+    borderRadius:50,
+    marginBottom:20
   },
   box4: {
     width: 60, height: 60, backgroundColor: 'steelblue',
