@@ -1,9 +1,13 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 
 const Login = () => {
   return (
-    <View>Login</View>
+    <View>
+      <Text>
+      Login
+      </Text>
+    </View>
   )
 }
 

@@ -1,8 +1,12 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 
 export const Input = () => {
   return (
-    <View>Input</View>
+    <View>
+      <Text>
+      Input
+      </Text>
+    </View>
   )
 }
