@@ -9,7 +9,7 @@ const Home = () => {
     <View style={style.container}>
       <View style={style.box}>
         <Image source={HomeTopBg} style={style.image1} />
-        <Slide />
+        <Slide/>
       </View>
       <View style={style.box5}></View>
     </View>
