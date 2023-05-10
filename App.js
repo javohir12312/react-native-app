@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, Text, View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import Footer from './components/Footer/Footer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -11,7 +11,7 @@ import Output from './components/Output/Output';
 import store from './store';
 import { Provider } from 'react-redux';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator(); 
 
 const App = () => {
   return (

@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-import { SafeAreaView, Text, View, StyleSheet, TouchableOpacity } from 'react-native'
-import { Feather } from '@expo/vector-icons';
-import { Button } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import { Ionicons } from '@expo/vector-icons'; import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { openHome } from '../../slice';
