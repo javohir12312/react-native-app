@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import Swiper from 'react-native-swiper';
 import CardBg from '../../assets/card_bg.jpg'
-import HomeTopBg from '../../assets/home_top_bg.jpg'
 import { AntDesign } from '@expo/vector-icons';
 
 const SliderExample = () => {
