@@ -6,8 +6,8 @@ import { AntDesign } from '@expo/vector-icons';
 
 const SliderExample = () => {
   return (
-    <View style={{ position: 'absolute', bottom: -70 }}>
-      <Swiper>
+    <View style={{ position: 'absolute', bottom: -70, zIndex: 3 }}>
+      <Swiper style={{ top: 280,bottom:0, zIndex: 3 }}>
         <View style={styles.slide}>
 
           <View style={style.box2}>
@@ -46,12 +46,9 @@ const styles = {
   slide: {
     flex: 1,
     justifyContent: 'center',
-  },
-  text: {
-    color: 'white',
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
+    width: '100%',
+    
+  }
 };
 
 
@@ -67,9 +64,7 @@ const style = StyleSheet.create({
     opacity: 0.9,
   },
   box2: {
-    position: "absolute",
-    left: "5%",
-    width: "90%", height: "30%",
+    width: '100%', height: "30%",
     justifyContent: 'center',
     height: 180,
     borderRadius: 20,

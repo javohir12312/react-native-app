@@ -31,16 +31,6 @@ const style = StyleSheet.create({
     height: "100%",
     opacity: 0.9,
   },
-  box2: {
-    position: "absolute",
-    bottom: -70,
-    left: "5%",
-    width: "90%",
-    height: 180,
-    borderRadius: 20,
-    borderWidth: 2,
-    borderColor: "#0E89CB",
-  },
   box21: {
     position: "absolute",
     bottom: -70,
