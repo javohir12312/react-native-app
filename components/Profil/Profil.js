@@ -1,13 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Text, View, StyleSheet, Button, Modal } from 'react-native'
 import { Entypo, Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Profil = () => {
-  const [visible, setVisible] = useState(false);
-  const show = () => setVisible(true);
-  const hide = () => setVisible(false);
   return (
     <View style={style.box}>
       <View style={style.top}>
@@ -31,7 +27,7 @@ const Profil = () => {
             <MaterialIcons name="keyboard-arrow-right" size={24} color="#999" />
           </View>
         </View>
-        
+
         <View style={style.centerCenter}>
           <Text style={style.centerText1}>Date of birth:</Text>
           <View style={style.centerEmail}>
@@ -40,23 +36,14 @@ const Profil = () => {
           </View>
         </View>
 
-        <SafeAreaView >
-          <View style={style.centerBottom} onPress={show} >
-            <Text style={style.centerText1}>Gander:</Text>
-            <View style={style.centerEmail}>
-              <Text style={style.email}>Male</Text>
-              <MaterialIcons name="keyboard-arrow-right" size={24} color="#999" />
-            </View>
+        <View style={style.centerBottom}>
+          <Text style={style.centerText1}>Gander:</Text>
+          <View style={style.centerEmail}>
+            <Text style={style.email}>Male</Text>
+            <MaterialIcons name="keyboard-arrow-right" size={24} color="#999" />
           </View>
+        </View>
 
-          <Modal visible={visible}>
-            <SafeAreaView>
-              <Text>Salom</Text>
-              <Button title="Hide" onPress={hide} />
-            </SafeAreaView>
-          </Modal>
-        </SafeAreaView>
-        
       </View>
       <View style={style.bottom}></View>
     </View>
