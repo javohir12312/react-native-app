@@ -135,7 +135,7 @@ const style = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    // paddingTop: 14,
+    paddingTop: 14,
   },
   centerText1: {
     fontWeight: "600",
