@@ -7,10 +7,10 @@ import { AntDesign } from '@expo/vector-icons';
 
 const SliderExample = () => {
   return (
-    <Swiper>
-      <View style={styles.slide}>
-        <View style={style.box}>
-          <Image source={HomeTopBg} style={style.image1} />
+    <View style={{ position: 'absolute', bottom: -70 }}>
+      <Swiper>
+        <View style={styles.slide}>
+
           <View style={style.box2}>
             <Image source={CardBg} style={style.image2} />
             <View style={style.box3}>
@@ -21,21 +21,25 @@ const SliderExample = () => {
               <Text style={style.text2}>19/08/03</Text>
             </View>
           </View>
+
+
         </View>
-      </View>
-      <View style={styles.slide}>
-        <View style={style.box2}>
-          <Image source={CardBg} style={style.image2} />
-          <View style={style.box6}>
-            <View style={style.add}>
-              <Text style={style.text3}>
-                <AntDesign name="plus" size={34} color="white" />
-              </Text>
+        <View style={styles.slide}>
+
+          <View style={style.box2}>
+            <Image source={CardBg} style={style.image2} />
+            <View style={style.box6}>
+              <View style={style.add}>
+                <Text style={style.text3}>
+                  <AntDesign name="plus" size={34} color="white" />
+                </Text>
+              </View>
             </View>
           </View>
+
         </View>
-      </View>
-    </Swiper>
+      </Swiper>
+    </View>
   );
 };
 
@@ -43,7 +47,6 @@ const styles = {
   slide: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'gray',
   },
   text: {
     color: 'white',
@@ -59,7 +62,7 @@ const style = StyleSheet.create({
   },
   box: {
     height: "30%",
-    justifyContent:'center',
+    justifyContent: 'center',
   },
   image1: {
     opacity: 0.9,
@@ -67,8 +70,8 @@ const style = StyleSheet.create({
   box2: {
     position: "absolute",
     left: "5%",
-    width: "90%",    height: "30%",
-    justifyContent:'center',
+    width: "90%", height: "30%",
+    justifyContent: 'center',
     height: 180,
     borderRadius: 20,
     borderWidth: 2,

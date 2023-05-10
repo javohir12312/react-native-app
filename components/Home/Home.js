@@ -1,12 +1,37 @@
 import React from 'react'
 import { Text, View, Image, StyleSheet } from 'react-native'
+import CardBg from '../../assets/card_bg.jpg'
+import HomeTopBg from '../../assets/home_top_bg.jpg'
 import Slide from '../Slide/Slide'
 
 const Home = () => {
 
   return (
     <View style={style.container}>
-     <Slide/>
+      <View style={style.box}>
+        <Image source={HomeTopBg} style={style.image1} />
+        <Slide />
+        {/* <View style={style.box2}>
+          <Image source={CardBg} style={style.image2} />
+          <View style={style.box3}>
+            <Text style={style.text1}>1 000 000 000$</Text>
+          </View>
+          <View style={style.box4}>
+            <Text style={style.text2}>Zokirov J</Text>
+            <Text style={style.text2}>19/08/03</Text>
+          </View>
+        </View> */}
+        {/* <View style={style.box2}>
+          <Image source={CardBg} style={style.image2} />
+          <View style={style.box6}>
+            <View style={style.add}>
+              <Text style={style.text3}>
+                <AntDesign name="plus" size={34} color="white" />
+              </Text>
+            </View>
+          </View>
+        </View> */}
+      </View>
       <View style={style.box5}></View>
     </View>
   )
