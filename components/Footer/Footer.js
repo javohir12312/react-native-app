@@ -3,19 +3,12 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useDispatch, useSelector } from 'react-redux';
-import { openHome } from '../../slice';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
 const Footer = () => {
 
-  const selector = useSelector((state) => state.home)
-  const dispatch = useDispatch()
-
   const navigation = useNavigation();
-
-
 
   const GoToOutput = () => {
     navigation.navigate('Output');
@@ -28,7 +21,6 @@ const Footer = () => {
   };
 
   const GoToHome = () => {
-    dispatch(openHome)
     navigation.navigate('Home');
     handleButtonPress(3)
   };

@@ -1,42 +1,37 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useState, useEffect } from 'react';
 import Footer from './components/Footer/Footer';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './components/Home/Home';
-import Profil from './components/Profil/Profil';
-import Info from './components/Info/Info';
-import { Input } from './components/Input/Input';
-import Output from './components/Output/Output';
-import store from './store';
-import { Provider } from 'react-redux';
-
-const Stack = createNativeStackNavigator(); 
+import { EventRegister } from 'react-native-event-listeners';
+import ThemeContext from './components/Theme/ThemeContext';
+import Theme from './components/Theme/Theme';
+import AppNavigation from './AppNavigation/AppNavigation';
 
 const App = () => {
+  const [mode, setMode] = useState(false)
+
+  useEffect(() => {
+    let eventListener = EventRegister.addEventListener(
+      'changeTheme',
+      (data) => {
+        setMode(data)
+      }
+    );
+    return () => {
+      EventRegister.removeEventListener(eventListener)
+    }
+  })
+
   return (
     <>
-      <Provider store={store}>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} options={{ title: 'Welcome' }}
-          />
-          <Stack.Screen navigationKey='Profile' name="Profile" component={Profil} />
-          <Stack.Screen navigationKey='Info' name="Info" component={Info} />
-          <Stack.Screen navigationKey='Input' name="Input" component={Input} />
-          <Stack.Screen navigationKey='Output' name="Output" component={Output} />
-        </Stack.Navigator>
-        <Footer />
-      </NavigationContainer>
-      </Provider>
+      <ThemeContext.Provider value={mode === true ? Theme.dark : Theme.light}>
+        <NavigationContainer>
+          <AppNavigation />
+          <Footer />
+        </NavigationContainer>
+      </ThemeContext.Provider>
     </>
-  );
+  )
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;
