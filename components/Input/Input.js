@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from 'react-native'
 import { Dropdown } from 'react-native-element-dropdown';
 
 const data = [
-  { label: 'UZS', value: '2' },
   { label: 'USD', value: '1' },
+  { label: 'UZS', value: '2' },
   { label: 'RUBLE', value: '3' },
 ];
 
